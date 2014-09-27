@@ -1,0 +1,25 @@
+{
+    "name": "dgee2/slim-plus",
+    "description": "An extended version of the slim framework that provides extras such as twig views",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Daniel Gee",
+            "email": "dan@dan-gee.co.uk"
+        }
+    ],
+    "require": {
+	"php": ">=5.3.0",
+	"slim/slim": "2.*",
+	"slim/views": "0.*",
+	"twig/twig": "1.*",
+	"lichtner/fluentpdo": "dev-master"
+    },
+    "autoload": {
+    	"psr-4": {
+		"DGee2\\SlimPlus\\Model\\": "src/model/",
+		"DGee2\\SlimPlus\\Controller\\": "src/controller/"
+	},
+	"classmap": ["src/App.php"]
+    }
+}
