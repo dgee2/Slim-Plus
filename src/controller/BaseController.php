@@ -7,7 +7,6 @@
 namespace DGee2\SlimPlus\Controller;
 
 use DGee2\SlimPlus\App;
-use Middleware\Login;
 
 /**
  * Abstract class to provide common functionality to controllers
@@ -30,8 +29,6 @@ abstract class BaseController {
 	 */
 	protected static function renderPage($template, $data = array(), $status = null) {
 		$data['slim'] = App::slim();
-		$data['loggedIn'] = Login::loggedIn();
-		$data['user'] = Login::getLoginUser();
 		App::slim()->render($template, $data, $status);
 	}
 
