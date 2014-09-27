@@ -6,7 +6,7 @@
 
 namespace DGee2\SlimPlus\Controller;
 
-use App;
+use DGee2\SlimPlus\App;
 use Middleware\Login;
 
 /**
