@@ -8,6 +8,8 @@
 
 namespace DGee2\SlimPlus;
 
+use Exception;
+
 /**
  * Description of Application
  *
