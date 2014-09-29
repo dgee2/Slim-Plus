@@ -36,6 +36,12 @@ final class App {
 	public static $secret;
 
 	/**
+	 * 
+	 * @var string
+	 */
+	public static $templatePath = "../views";
+	
+	/**
 	 * Singleton access
 	 * @return \App
 	 */
@@ -58,7 +64,7 @@ final class App {
 	private function __construct() {
 		// Prepare app
 		$this->slim = new \Slim\Slim(array(
-			'templates.path' => '../views',
+			'templates.path' => self::$templatePath,
 		));
 
 		// Prepare view
