@@ -86,12 +86,15 @@ final class App {
 		]));
 	}
 
+	/**
+	 * Get the slim instance for the application
+	 * @return \Slim\Slim
+	 */
 	public static function slim() {
 		return self::Instance()->slim;
 	}
 
 	public static function run() {
-
 		return self::slim()->run();
 	}
 
