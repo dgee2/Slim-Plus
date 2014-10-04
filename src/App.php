@@ -40,6 +40,8 @@ final class App {
 	 * @var string
 	 */
 	public static $templatePath = "../views";
+
+	public static $debug = false;
 	
 	/**
 	 * Singleton access
@@ -76,6 +78,9 @@ final class App {
 			'autoescape' => true
 		);
 		$this->slim->view->parserExtensions = array(new \Slim\Views\TwigExtension());
+		if (self::$debug){
+			$this->slim->view->parserExtensions[] = new \Twig_Extension_Debug();
+		}
 		$this->slim->add(new \Slim\Middleware\SessionCookie([
 			'expires' => '20 minutes',
 			'secure' => TRUE,
