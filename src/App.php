@@ -41,6 +41,10 @@ final class App {
 	 */
 	public static $templatePath = "../views";
 
+	/**
+	 * Whether to use debug mode (defaults to false)
+	 * @var bool
+	 */
 	public static $debug = false;
 	
 	/**
