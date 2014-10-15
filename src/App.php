@@ -30,12 +30,6 @@ final class App {
 	public static $pdo;
 
 	/**
-	 *
-	 * @var string 
-	 */
-	public static $secret;
-
-	/**
 	 * 
 	 * @var string
 	 */
@@ -54,9 +48,6 @@ final class App {
 	public static function Instance() {
 		static $inst = null;
 		if (is_null($inst)) {
-			if (!isset(self::$secret)) {
-				throw new Exception("secret has not been set");
-			}
 			if (!isset(self::$pdo)) {
 				throw new Exception("PDO has not been set");
 			}
