@@ -85,14 +85,7 @@ final class App {
 		if (self::$debug){
 			$this->slim->view->parserExtensions[] = new \Twig_Extension_Debug();
 		}
-		$this->slim->add(new \Slim\Middleware\SessionCookie([
-			'expires' => '20 minutes',
-			'secure' => TRUE,
-			'httponly' => TRUE,
-			'secret' => self::$secret,
-			'cipher' => MCRYPT_RIJNDAEL_256,
-			'cipher_mode' => MCRYPT_MODE_CBC
-		]));
+		$this->slim->add(new \Slim\Middleware\SessionCookie());
 	}
 
 	/**
