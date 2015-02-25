@@ -77,7 +77,7 @@ abstract class TableBase extends ReadonlyBase {
 	}
 
 	public function __set($name, $value) {
-		$function = "set" + ucfirst($name);
+		$function = "set" . ucfirst($name);
 		return $this->$function($value);
 	}
 

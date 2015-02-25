@@ -78,7 +78,7 @@ abstract class ReadonlyBase {
 	protected abstract function getTable();
 
 	public function __get($name) {
-		$function = "get" + ucfirst($name);
+		$function = "get" . ucfirst($name);
 		return $this->$function();
 	}
 
