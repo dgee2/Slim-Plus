@@ -38,8 +38,8 @@ abstract class TableBase extends ReadonlyBase {
 		if (count($dbData) > 0) {
 			if (is_array($id)) {
 				$update = static::fluent()->update($table, $dbData);
-				foreach ($id as $idKey) {
-					$update->where($idKey, $this->$idKey);
+				foreach ($id as $idKey => $idValue) {
+					$update->where($idKey, $idValue);
 				}
 			} else {
 				$update = static::fluent()->update($table, $dbData, $id);
