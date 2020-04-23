@@ -13,7 +13,7 @@
 		"slim/slim": "2.*",
 		"slim/views": "0.*",
 		"twig/twig": "1.*",
-        "lichtner/fluentpdo": "1.0.*"
+        "lichtner/fluentpdo": "2.1.*"
     },
     "autoload": {
     	"psr-4": {
